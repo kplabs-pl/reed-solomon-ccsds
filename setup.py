@@ -26,7 +26,7 @@ setuptools.setup(
     packages=['reed_solomon_ccsds'],
     include_package_data=True,
     setup_requires=['setuptools-scm'],
-    install_requires=['numpy'],
+    install_requires=['numpy>=1.17.4'],
     extras_require={
         'dev': ['yapf'],
         'tests': ['flake8', 'mypy', 'pytest']

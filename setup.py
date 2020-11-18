@@ -5,6 +5,8 @@ this_directory = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
+numpy_version = '1.17.4'
+
 setuptools.setup(
     name='reed_solomon_ccsds',
     url='https://github.com/kplabs-pl/reed-solomon-ccsds',
@@ -25,8 +27,8 @@ setuptools.setup(
     ],
     packages=['reed_solomon_ccsds'],
     include_package_data=True,
-    setup_requires=['setuptools-scm'],
-    install_requires=['numpy>=1.17.4'],
+    setup_requires=['setuptools-scm', f'numpy>={numpy_version}'],
+    install_requires=[f'numpy>={numpy_version}'],
     extras_require={
         'dev': ['yapf'],
         'tests': ['flake8', 'mypy', 'pytest']

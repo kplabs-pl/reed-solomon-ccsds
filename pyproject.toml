@@ -1,0 +1,46 @@
+[build-system]
+requires = [
+  "hatchling",
+  "hatch-vcs",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "reed-solomon-ccsds"
+dynamic = ["version"]
+description = 'Reed Solomon CCSDS (255, 223)'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "LGPL-2.1"
+keywords = []
+authors = [
+  { name = "KPLabs Team" }
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "numpy>=1.17.4"
+]
+
+[project.urls]
+Documentation = "https://github.com/kplabs-pl/reed-solomon-ccsds#readme"
+Issues = "https://github.com/kplabs-pl/reed-solomon-ccsds/issues"
+Source = "https://github.com/kplabs-pl/reed-solomon-ccsds"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.envs.dev]
+dependencies = [
+  "pytest==8.2.2",
+  "flake8==7.1.0",
+  "mypy==1.10.1",
+]
